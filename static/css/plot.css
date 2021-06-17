@@ -1,0 +1,22 @@
+#container,
+.sections,
+.section {
+    /*必须，兼容，在浏览器不支持transform属性时，通过改变top/left完成滑动动画*/
+    position: relative;
+    /*必须，关系到单个page能否全屏显示*/
+    /* height: 100vh; */
+}
+
+
+/*非必需，只是用来设置背景图，id不会被插件用到*/
+
+#section0 {
+    background-image: url(./../images/index/index.png);
+}
+
+#section2 {
+    background-image: url(./../images/third/thirdBg.png);
+}
+
+
+/*以下样式用来设置slider样式，可自行修改*/

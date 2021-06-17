@@ -1,0 +1,465 @@
+/* 全屏滚动
+ */
+
+.sections {
+    height: 100vh;
+    transition: all 1s ease;
+}
+
+.section {
+    height: 100vh;
+    min-width: 1280px;
+    /*  */
+    overflow: hidden;
+}
+
+
+/* #section0 {
+    background-color: aqua;
+}
+
+#section1 {
+    background-color: red;
+}
+
+#section2 {
+    background-color: blue;
+} */
+
+
+/* 内容 */
+
+body {
+    /* overflow-x: auto; */
+    /* overflow-y: auto; */
+    overflow-y: hidden;
+    min-width: 1280px;
+    /* width: 100vw; */
+    height: 100vh;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+
+/* 第一页 */
+
+div.first {
+    position: absolute;
+    top: 0;
+    /*  */
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    margin: auto;
+    /* overflow: hidden; */
+    user-select: none;
+    overflow: auto;
+}
+
+
+/* head */
+
+div.first nav {
+    width: 100%;
+    height: 41px;
+}
+
+div.first a.logo {
+    margin: 23px 0 0 43px;
+    width: 415px;
+    height: 100%;
+    background: no-repeat;
+    background-image: url(./../images/index/logo.png);
+    display: inline-block;
+}
+
+div.first nav a.join {
+    margin: 29px 43px 0 0;
+    width: 90px;
+    height: 30px;
+    background-image: url(./../images/index/join.png);
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+}
+
+
+/* 下面的文字部分 */
+
+div.first section {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    line-height: 2em;
+    color: white;
+    overflow-y: auto;
+}
+
+div.first section div {
+    height: 50%;
+    word-wrap: break-word;
+}
+
+
+/* 鸡汤 */
+
+div.first section .sweet {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    font-size: 42px;
+    transition: all 2.5s ease;
+}
+
+
+/* 介绍 */
+
+div.first section .introduction {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    font-size: 20px;
+    transition: all 3s ease;
+}
+
+
+/* 按钮 */
+
+div.first div.more {
+    width: 132px;
+    height: 42px;
+    border: 3px solid #E3705E;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 42px;
+    color: white;
+    font-size: 17px;
+    background-color: rgba(red, green, blue, 0.8);
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+}
+
+div.first div.more a {
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    min-width: 1250px;
+    /* overflow-x: auto; */
+    background-color: #fff;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+/* 第二页 */
+
+div.second {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    user-select: none;
+    min-width: 1280px;
+}
+
+div.second nav {
+    width: 100vw;
+    height: 41px;
+}
+
+div.second a.logo {
+    margin: 23px 0 0 43px;
+    width: 415px;
+    height: 100%;
+    background: no-repeat;
+    background-image: url(./../images/second/logo.png);
+    display: inline-block;
+}
+
+
+/* 第二个的内容盒 */
+
+div.second div.co {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 100%;
+}
+
+div.second section {
+    min-width: 1450px;
+}
+
+div.second section ul.dot {
+    width: 20px;
+    height: 30vh;
+    top: 50%;
+    left: 0;
+    transform: translate(200%, 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+}
+
+div.second section ul.dot li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 10px #707070;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* 内容盒里面的内容 */
+
+div.second section .containS {
+    width: 600px;
+    color: white;
+    position: relative;
+    font-weight: 300;
+    transform: translateX(8%);
+    position: absolute;
+}
+
+div.second section .containS h1 {
+    font-size: 45px;
+    width: 235px;
+    height: 112px;
+    line-height: 56px;
+    margin-block-start: 0.1em;
+    margin-block-end: 0em;
+    padding-top: 35px;
+    padding-left: 45px;
+}
+
+div.second section .containS img {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    left: 40px;
+    bottom: 35px;
+}
+
+div.second section .containS p {
+    font-size: 23px;
+    line-height: 36px;
+    width: 60%;
+    height: 427px;
+    position: absolute;
+    right: 6%;
+    top: 20%;
+}
+
+
+/* 方向选择 */
+
+div.second section ul.choice {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 69%;
+    transform: translate(50%, 8%);
+}
+
+div.second section ul.choice li {
+    text-align: center;
+    line-height: 68px;
+    width: 229px;
+    height: 68px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #707070;
+    color: #AFAFAF;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div.second section div.containS {
+    width: 1000px;
+    height: 554.4px;
+}
+
+div.second section div.containS div.containI {
+    position: absolute;
+    transition: all 1s;
+}
+
+div.second section div.containS div.containI:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    background: url(./../images/second/htmlBg.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+div.second section div.containS div.containI:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+    background: url(./../images/second/javaBg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+div.second section div.containS div.containI:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+    background: url(./../images/second/safeBg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+div.second section div.containS div.containI:nth-of-type(4) {
+    width: 100%;
+    height: 100%;
+    background: url(./../images/second/createBg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+div.second section div.containS div.containI:nth-of-type(5) {
+    width: 100%;
+    height: 100%;
+    background: url(./../images/second/productBg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 拖动条 */
+
+input[type=range] {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 360px;
+    border-radius: 5px;
+    background: #ffffff;
+    /*这个属性设置使填充进度条时的图形为圆角*/
+    transform: translateY(-50%) rotate(90deg);
+    position: absolute;
+    right: -110px;
+    top: 34vh;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    /*将轨道设为圆角的*/
+    box-shadow: 0 0 10px #D3D3D3;
+    /*轨道内置阴影效果*/
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    margin-top: -5px;
+    /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff;
+    border-radius: 50%;
+    /*外观设置为圆形*/
+    box-shadow: 0 0 10px #D3D3D3;
+    /*添加底部阴影*/
+    background-image: url(./../images/second/circle.png);
+    background-size: 300% 300%;
+    background-position: 50% 50%;
+}
+
+
+/* 第三页 */
+
+div.third {
+    position: absolute;
+    height: 792px;
+    top: 1584px;
+    /* top: 200vh; */
+    min-width: 1450px;
+    width: 100vw;
+    /* height: 100vh; */
+    background: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(./../images/index/index.png);
+    margin: auto;
+    overflow: hidden;
+    user-select: none;
+}
+
+
+/* 向下按鈕 */
+
+div.second .down {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(50% 0);
+    background: url(./../images/second/down.png) no-repeat;
+    background-position: 50% 50%;
+    /* background-size: 100% 100%; */
+    animation: movedown .7s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes movedown {
+    0% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+nav {
+    width: 100vw;
+    height: 41px;
+}
+
+a.logo {
+    margin: 23px 0 0 43px;
+    width: 415px;
+    height: 100%;
+    background: no-repeat;
+    background-image: url(./../images/index/logo.png);
+    display: inline-block;
+}
+
+nav a.join {
+    margin: 29px 43px 0 0;
+    width: 90px;
+    height: 30px;
+    background-image: url(./../images/index/join.png);
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+}
+
+.up {
+    width: 50px;
+    height: 17px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(50%) rotate(180deg);
+    width: 20px;
+    height: 20px;
+    background-image: url(./../images/second/down.png);
+    background-size: 100% 100%;
+}

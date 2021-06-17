@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- 网站采用的字符编码 -->
+    <meta charset="utf-8">
+    <!-- 网站标题 -->
+    <title>首页</title>
+    {% load static %}
+    <!-- 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- 引入vuejs -->
+    <script type="text/javascript" src="{% static 'js/vue-2.5.16.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/axios-0.18.0.min.js' %}"></script>
+</head>
+
+<body>
+<div id="app">
+<!-- 定义导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <!-- 如果用户已经登录，则显示用户名下拉框 -->
+                <li class="nav-item dropdown" v-if="is_login">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @click="show_menu_click">{{username}} {{std_no}} {{class_name}}</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="display: block" v-show="show_menu">
+                        <a class="dropdown-item" href='{% url 'users:logout' %}'>退出登录</a>
+                    </div>
+                </li>
+                <!-- 如果用户未登录，则显示登录按钮 -->
+                <li class="nav-item" v-else>
+                    <a class="nav-link" href="{% url 'users:login' %}">登录</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+<footer class="py-3 bg-dark" id="footer">
+    <div class="container">
+        <h5 class="m-0 text-center text-white">Copyright @ xiyounet2020</h5>
+    </div>
+</footer>
+</div>
+<script type="text/javascript" src="{% static 'js/host.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/center.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="content page posts-expand">
+        <div class="post-block animated fadeIn" lang="en">
+            <header class="post-header animated fadeInDown">
+                <h1 class="post-title" itemprop="name headline">{{ tag_name }}</h1>
+
+                <div class="post-meta">
+                    <div class="post-description">共:{{ tag_article.count }}篇</div>
+                </div>
+            </header>
+
+
+            <div class="post-body animated fadeInDown">
+                {% for article in tag_article %}
+                    <li><a href="{% url 'home:detail' article.id %}" rel="noopener external nofollow noreferrer" target="_blank" class="exturl" title="">{{ article.title }}</a></li>
+                {% endfor %}
+            </div>
+
+
+        </div>
+
+
+    </div>
+{% endblock %}

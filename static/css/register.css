@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+input,
+select {
+    outline: none;
+}
+
+.register-bg {
+    width: 100%;
+    height: 100vh;
+    min-width: 999px;
+    min-height: 666px;
+    background: url(./../images/third/thirdBg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    width: 100%;
+    height: 41px;
+}
+
+a.logo {
+    margin: 23px 0 0 43px;
+    width: 415px;
+    height: 100%;
+    background: no-repeat;
+    background-image: url(./../images/index/logo.png);
+    display: inline-block;
+}
+
+nav a.join {
+    margin: 29px 43px 0 0;
+    width: 90px;
+    height: 30px;
+    background-image: url(./../images/index/join.png);
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+}
+
+.register-slogan {
+    position: relative;
+    top: 237px;
+    left: 19%;
+    width: 354px;
+    height: 239px;
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-size: 60px;
+}
+
+.register-slogan>div:nth-of-type(2) {
+    margin-top: 69px;
+    margin-left: 53px;
+}
+
+.register-slogan>div:nth-of-type(3) {
+    margin-top: 69px;
+    margin-left: 106px;
+}
+
+@media screen and (min-width: 1366px) {
+    .register-register {
+        width: 513px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .register-register {
+        width: 37.5%;
+    }
+}
+
+.register-register {
+    position: relative;
+    left: 53%;
+    top: -119px;
+    height: 537px;
+    border: 3px solid #f38283;
+    border-radius: 22px;
+    z-index: 9;
+}
+
+.register-register-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 531px;
+    border-radius: 22px;
+    background-color: #707070;
+    filter: blur(6px) opacity(16%);
+    z-index: -1;
+}
+
+.register-register-title {
+    width: 260px;
+    height: 37px;
+    margin: 30px auto;
+    font-size: 28px;
+    color: white;
+}
+
+.register-register-title span {
+    color: #f1a277;
+}
+
+.register-register-form {
+    color: white;
+}
+
+.register-register-direction {
+    display: flex;
+    width: 332px;
+    height: 37px;
+    margin: 20px auto;
+}
+
+.register-register-direction select {
+    width: 332px;
+    height: 37px;
+    margin-left: 10px;
+    color: white;
+    background: none;
+    border: none;
+    border-radius: 13px;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.register-register-direction select option {
+    width: 332px;
+    background-color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.register-register-direction-space {
+    width: 10px;
+}
+
+.register-register-form {
+    width: 337px;
+    margin: 80px auto;
+}
+
+.register-register-form>div {
+    width: 332px;
+    height: 37px;
+    margin-top: 55px;
+}
+
+.register-register-phone input,
+.register-register-vercode input {
+    position: absolute;
+    width: 332px;
+    height: 37px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 13px;
+    background: none;
+    font-size: 19px;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 9;
+}
+
+.wInput::-webkit-input-placeholder {
+    color: white;
+}
+
+.wInput::-ms-input-placeholder {
+    color: white;
+}
+
+.wInput:-ms-input-placeholder {
+    color: white;
+}
+
+.wInput::-moz-placeholder {
+    color: white;
+}
+
+.wInput:-moz-placeholder {
+    color: white;
+}
+
+.wInput {
+    width: 204px !important;
+}
+
+.rInput::-webkit-input-placeholder {
+    color: #e97171;
+}
+
+.rInput::-ms-input-placeholder {
+    color: #e97171;
+}
+
+.rInput:-ms-input-placeholder {
+    color: #e97171;
+}
+
+.rInput::-moz-placeholder {
+    color: #e97171;
+}
+
+.rInput:-moz-placeholder {
+    color: #e97171;
+}
+
+.rInput {
+    color: #e97171 !important;
+}
+
+.register-register-direction-div,
+.register-register-phone-div,
+.register-register-vercode-div {
+    position: absolute;
+    width: 332px;
+    height: 37px;
+    border: none;
+    border-radius: 13px;
+    background-color: #ffffff;
+    filter: blur(1px) brightness(85%) opacity(60%);
+    z-index: -1;
+}
+
+#register-register-getvercode {
+    float: right;
+    width: 128px;
+    height: 38px;
+    color: rgba(0, 0, 0, 0.7);
+    background: none;
+    border: 2px solid #86dcdd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.register-register-phone-error {
+    position: absolute;
+    margin-top: 14px !important;
+    padding-left: 13px;
+    font-size: 19px;
+    color: #eea2a4;
+}
+
+.register-register-submit {
+    display: block;
+    width: 124px;
+    height: 44px;
+    color: white;
+    margin: 70px auto;
+    outline: none;
+    border: 3px solid #86dcdd;
+    border-radius: 3px;
+    background: none;
+    cursor: pointer;
+}

@@ -1,0 +1,333 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block nav %}
+<style>
+article:hover {
+	box-shadow: 0 15px 30px 0 rgba(0,0,0,.1);
+opacity: 1;
+}
+.nav {
+	--body-bg-color: #eee;
+	--content-bg-color: #fff;
+	--card-bg-color: #f5f5f5;
+	--text-color: #555;
+	--blockquote-color: #666;
+	--link-color: #555;
+	--link-hover-color: #222;
+	--brand-color: #fff;
+	--brand-hover-color: #fff;
+	--table-row-odd-bg-color: #f9f9f9;
+	--table-row-hover-bg-color: #f5f5f5;
+	--menu-item-bg-color: #f5f5f5;
+	--btn-default-bg: #fff;
+	--btn-default-color: #555;
+	--btn-default-border-color: #555;
+	--btn-default-hover-bg: #222;
+	--btn-default-hover-color: #fff;
+	--btn-default-hover-border-color: #222;
+	--highlight-background: #f0f0f0;
+	--highlight-foreground: #444;
+	--highlight-gutter-background: #dedede;
+	--highlight-gutter-foreground: #555;
+	--sidebar-wrapper-height: 586px;
+	font-family: sans-serif;
+	line-height: 2;
+color: var(--text-color);
+	   font-size: 0.875em;
+visibility: inherit;
+			list-style: none;
+margin: 0;
+padding: 0 2px 5px 10px;
+		 text-align: left;
+}
+
+.nav-item nav-level-2 {
+	--body-bg-color: #eee;
+	--content-bg-color: #fff;
+	--card-bg-color: #f5f5f5;
+	--text-color: #555;
+	--blockquote-color: #666;
+	--link-color: #555;
+	--link-hover-color: #222;
+	--brand-color: #fff;
+	--brand-hover-color: #fff;
+	--table-row-odd-bg-color: #f9f9f9;
+	--table-row-hover-bg-color: #f5f5f5;
+	--menu-item-bg-color: #f5f5f5;
+	--btn-default-bg: #fff;
+	--btn-default-color: #555;
+	--btn-default-border-color: #555;
+	--btn-default-hover-bg: #222;
+	--btn-default-hover-color: #fff;
+	--btn-default-hover-border-color: #222;
+	--highlight-background: #f0f0f0;
+	--highlight-foreground: #444;
+	--highlight-gutter-background: #dedede;
+	--highlight-gutter-foreground: #555;
+	--sidebar-wrapper-height: 586px;
+	font-family: sans-serif;
+color: var(--text-color);
+	   font-size: 0.875em;
+visibility: inherit;
+			list-style: none;
+			line-height: 1.8;
+overflow: hidden;
+		  text-overflow: ellipsis;
+		  margin-left: -15px;
+}
+
+.nav-text {
+	--body-bg-color: #eee;
+	--content-bg-color: #fff;
+	--card-bg-color: #f5f5f5;
+	--text-color: #555;
+	--blockquote-color: #666;
+	--link-color: #555;
+	--link-hover-color: #222;
+	--brand-color: #fff;
+	--brand-hover-color: #fff;
+	--table-row-odd-bg-color: #f9f9f9;
+	--table-row-hover-bg-color: #f5f5f5;
+	--menu-item-bg-color: #f5f5f5;
+	--btn-default-bg: #fff;
+	--btn-default-color: #555;
+	--btn-default-border-color: #555;
+	--btn-default-hover-bg: #222;
+	--btn-default-hover-color: #fff;
+	--btn-default-hover-border-color: #222;
+	--highlight-background: #f0f0f0;
+	--highlight-foreground: #444;
+	--highlight-gutter-background: #dedede;
+	--highlight-gutter-foreground: #555;
+	--sidebar-wrapper-height: 586px;
+	font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+	font-size: 0.875em;
+visibility: inherit;
+			list-style: none;
+			line-height: 1.8;
+color: var(--link-color);
+	   overflow-wrap: break-word;
+cursor: pointer;
+}
+</style>
+<aside class="sidebar animated fadeInUp">
+
+<div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+<ul class="sidebar-nav">
+<li class="sidebar-nav-toc">
+文章目录
+</li>
+<li class="sidebar-nav-overview">
+名片
+</li>
+</ul>
+
+<!--noindex-->
+<section class="post-toc-wrap sidebar-panel" style="opacity: 1;">
+
+<ul class="nav">
+<li class="nav-item nav-level-2">
+<span class="nav-text">
+{{ post.toc|safe }}
+</span>
+</li>
+</ul>
+
+</section>
+<!--/noindex-->
+<section class="site-overview-wrap sidebar-panel">
+<div class="site-author motion-element" itemprop="author" itemscope
+itemtype="http://schema.org/Person">
+{% block info %}
+<!-- 博客头像 -->
+<a href="/admin/">
+<img src="/media/{{ message.head_image }}"></a>
+<!-- 博客作者 -->
+<p class="site-author-name" itemprop="name">{{ message.nick_name }}</p>
+<!-- 一个简介 -->
+<div class="site-description" itemprop="description">{{ message.introduction }}</div>
+{% endblock %}
+</div>
+<div class="site-state-wrap motion-element">
+<nav class="site-state">
+<div class="site-state-item site-state-posts">
+<a href="/archives/">
+</a>
+</div>
+</nav>
+</div>
+<div class="links-of-author motion-element">
+{% block link-icon %}
+<!-- 导航图标链接 -->
+<span class="links-of-author-item">
+<span class="exturl"
+title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;{{ message.github }}">
+<a href="https://github.com/{{ message.github }}"><i class="fab fa-github fa-fw"></i></a></span>
+</span>
+<span class="links-of-author-item">
+<span class="exturl"
+title="E-Mail → {{ message.email }}">
+<a href="mailto:{{ message.email }}"> <i class="fa fa-envelope fa-fw"></i></a></span>
+</span>
+<span class="links-of-author-item">
+<span class="exturl"
+title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;{{ message.csdn }}">
+<a href="https://blog.csdn.net/{{ message.csdn }}"><i class="fa fa-address-card"></i></a></span>
+</span>
+{% endblock %}
+</div>
+{% block nav-left-end %}
+<!-- 左侧导航底部 -->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0"
+src="https://music.163.com/outchain/player?type=2&amp;id={{ message.music }}&amp;auto=0&amp;height=66"></iframe>
+{% endblock %}
+</section>
+<div class="back-to-top animated back-to-top-on">
+<i class="fa fa-arrow-up"></i>
+<span></span>
+</div>
+</div>
+
+
+</aside>
+
+
+{% endblock %}
+
+
+{% block body %}
+<div class="content post posts-expand">
+<article itemscope="" itemtype="https://schema.org/Article" class="post-block" lang="en">
+<link itemprop="mainEntityOfPage" href="https://theme-next.js.org/next-8-0-0-rc-1-released/">
+<span hidden="" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<meta itemprop="image" content="/images/logo.svg">
+<meta itemprop="name" content="Theme NexT">
+<meta itemprop="description" content="Stay Simple. Stay NexT.">
+</span>
+<span hidden="" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+<meta itemprop="name" content="NexT">
+</span>
+<header class="post-header">
+<h1 class="post-title" itemprop="name headline">
+{{ post.title }}<a
+href="/xadmin/home{{ post.get_absolute_url }}/update/"
+rel="noopener external nofollow noreferrer" target="_blank" class="exturl post-edit-link"
+title="Edit this post"><i class="fa fa-pen-nib"></i></a>
+</h1>
+
+<div class="post-meta">
+<span class="post-meta-item">
+<span class="post-meta-item-icon">
+<i class="far fa-calendar"></i>
+</span>
+<span class="post-meta-item-text">Posted on</span>
+
+<time title="Created: {{ post.created_time }}" itemprop="dateCreated datePublished"
+>{{ post.created_time.date }}</time>
+</span>
+
+
+<span class="post-meta-item">
+
+<span class="post-meta-item-icon">
+<i class="fa fa-tags"></i> {% for tag in post.tags.all %} {{ tag.tagname }}  {% endfor %}
+</span>
+</span>
+
+
+
+
+
+<span class="post-meta-item">
+
+<span class="post-meta-item-icon">
+<i class="far fa-eye"{{ post.increase_views }}></i> {{ post.views }}
+</span>
+</span>
+</div>
+</header>
+
+
+<div class="post-body" itemprop="articleBody">
+{{ post.body |safe }}
+</div>
+
+</article>
+</div>
+
+<div class="content post posts-expand">
+<article itemscope="" itemtype="https://schema.org/Article" class="post-block" lang="en">
+<link itemprop="mainEntityOfPage" href="https://theme-next.js.org/next-8-0-0-rc-1-released/">
+<span hidden="" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<meta itemprop="image" content="/images/logo.svg">
+<meta itemprop="name" content="Theme NexT">
+<meta itemprop="description" content="Stay Simple. Stay NexT.">
+</span>
+<span hidden="" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+<meta itemprop="name" content="NexT">
+</span>
+
+<h2 class="heading-w3-agile" id="comment_dot">评论区</h2>
+
+<div class="post-body" itemprop="articleBody">
+{% for comment in comments %}
+<div style="border: dashed#202020">
+<h4 style="text-indent:0.5em;">Content:</h4>
+<p style="text-indent:2em;">{{ comment.content}}</p>
+
+<span style="font-size: 15px; font-family: 华文楷体">
+<p style="text-indent:1em;">Post on: {{ comment.created_time }}</p>
+</span>
+
+</div>
+<br>
+{% endfor %}
+</div>
+</article>
+</div>
+
+
+
+<div class="content post posts-expand">
+<article itemscope="" itemtype="https://schema.org/Article" class="post-block" lang="en">
+<link itemprop="mainEntityOfPage" href="https://theme-next.js.org/next-8-0-0-rc-1-released/">
+<span hidden="" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<meta itemprop="image" content="/images/logo.svg">
+<meta itemprop="name" content="Theme NexT">
+<meta itemprop="description" content="Stay Simple. Stay NexT.">
+</span>
+<span hidden="" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+<meta itemprop="name" content="NexT">
+</span>
+
+<h2 class="heading-w3-agile">我也要发言：</h2>
+
+<form method="post">
+{% csrf_token %}
+<input type="hidden" name="id" value="{{ post.id }}">	
+<div> 
+	<textarea name="text" rows="5" style="width:100%; overflow:auto; word-break:break-all" require="">
+	</textarea>
+</div>
+<p><input name="submit" type="submit" id="submit" value="Biu~" style=" color: #fff;
+background: #5e5e5e;
+border: none;
+width: 100%;
+padding: .8em 0em;
+outline: none;
+font-size: 1.1em;
+cursor: pointer;
+letter-spacing: 1px;
+text-transform: capitalize;
+-webkit-transition: 0.5s all;
+font-family: 'Roboto', sans-serif;
+margin-top: 1.5em;"></p>
+</form>
+
+
+</article>
+</div>
+{% endblock %}
+

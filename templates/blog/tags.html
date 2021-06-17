@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="content page posts-expand">
+        <div class="post-block animated fadeIn" lang="en">
+            <header class="post-header animated fadeInDown">
+                <h1 class="post-title" itemprop="name headline">标签</h1>
+
+                <div class="post-meta">
+                    <div class="post-description">目前共计: {{ tag_nums }} 个</div>
+                </div>
+            </header>
+
+
+            <div class="post-body animated fadeInDown">
+                {% for tag in all_tag %}
+                    <a href="{% url 'home:tag_detail' tag.id %}"
+
+                       {% if tag.article_set.count <= 2 %}
+                            style="font-size: 12.5px; color: #999"
+                       {% elif tag.article_set.count <= 5 %}
+                            style="font-size: 15px; color: #666"
+                       {% elif tag.article_set.count <= 10 %}
+                            style="font-size: 20px; color: #444"
+                       {% elif tag.article_set.count <= 20 %}
+                            style="font-size: 25px; color: #222"
+                       {% elif tag.article_set.count <= 50 %}
+                            style="font-size: 30px; color: #111"
+                       {% else %}
+                            style="font-size: 35px; color: #000"
+                        {% endif %}> 
+
+                       {{ tag.tagname }}</a>                
+                {% endfor %}
+            </div>
+
+
+        </div>
+
+
+    </div>
+{% endblock %}

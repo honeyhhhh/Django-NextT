@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+input,
+select {
+    outline: none;
+}
+
+.login-bg {
+    width: 100vw;
+    height: 100vh;
+    min-width: 1450px;
+    min-height: 666px;
+}
+
+.login-logo {
+    position: absolute;
+    top: 23px;
+    left: 36px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 41px;
+    color: white;
+}
+
+.login-logo img {
+    width: 30px;
+    height: 37px;
+}
+
+.login-logo>span:nth-of-type(1) {
+    font-family: 'Gadugi';
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.login-logo>span:nth-of-type(2) {
+    display: inline-block;
+    height: 55px;
+    font-family: 'Gadugi';
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.login-logo>span:nth-of-type(3) {
+    font-size: 28px;
+}
+
+.login-konw-more {
+    float: right;
+    margin: 30px 68px 0 0;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.login-slogan {
+    position: relative;
+    top: 237px;
+    left: 19%;
+    width: 354px;
+    height: 239px;
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-size: 60px;
+}
+
+.login-slogan>div:nth-of-type(2) {
+    margin-top: 69px;
+    margin-left: 53px;
+}
+
+.login-slogan>div:nth-of-type(3) {
+    margin-top: 69px;
+    margin-left: 106px;
+}
+
+@media screen and (min-width: 1366px) {
+    .login-login {
+        width: 513px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .login-login {
+        width: 37.5%;
+    }
+}
+
+.login-login {
+    position: relative;
+    left: 53%;
+    top: -119px;
+    height: 537px;
+    border: 3px solid #f38283;
+    border-radius: 22px;
+    z-index: 9;
+}
+
+.login-login-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 531px;
+    border-radius: 22px;
+    background-color: #707070;
+    filter: blur(6px) opacity(16%);
+    z-index: -1;
+}
+
+.login-login-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 237.5px;
+    height: 48px;
+    margin: 0 auto;
+    margin-top: 32px;
+    color: #1199fb;
+    font-size: 29px;
+}
+
+.login-login-logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.login-login-tip {
+    width: 206px;
+    height: 27px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    color: white;
+}
+
+#login-login {
+    width: 337px;
+    margin: 80px auto;
+}
+
+#login-login>div {
+    width: 332px;
+    height: 37px;
+    margin-top: 55px;
+}
+
+#login-login input {
+    position: absolute;
+    width: 332px;
+    height: 37px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 13px;
+    background: none;
+    font-size: 19px;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 9;
+}
+
+input::-webkit-input-placeholder {
+    color: #666666;
+}
+
+input::-moz-placeholder {
+    color: #666666;
+}
+
+input:-moz-placeholder {
+    color: #666666;
+}
+
+input:-ms-input-placeholder {
+    color: #666666;
+}
+
+.login-login-num-div,
+.login-login-pwd-div {
+    position: absolute;
+    width: 332px;
+    height: 37px;
+    border: none;
+    border-radius: 13px;
+    background-color: #ffffff;
+    filter: blur(1px) brightness(85%) opacity(60%);
+    z-index: -1;
+}
+
+.login-submit {
+    display: block;
+    width: 124px;
+    height: 44px;
+    color: white;
+    margin: 73px auto;
+    outline: none;
+    border: 3px solid #86dcdd;
+    border-radius: 3px;
+    background: none;
+    cursor: pointer;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网络科技协会</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+</head>
+
+<body>
+    <div class="register-bg">
+        <nav>
+            <a href="http://www.xiyounet.club" class="logo">
+                <div class="logo"></div>
+            </a>
+            <a href="http://www.xiyounet.club" class="join">
+                <div class="join"></div>
+            </a>
+        </nav>
+        <div class="register-slogan">
+            <div>IDEA,</div>
+            <div>SHARE,</div>
+            <div>BEYOND</div>
+        </div>
+        <div class="register-register">
+            <div class="register-register-bg"></div>
+            <div class="register-register-title">
+                选择你感兴趣的<span>方向</span>
+            </div>
+            <div class="register-register-form">
+                {% csrf_token %}
+                <input type="hidden" name="class_name" value="{{class_name}}">
+                <input type="hidden" name="username" value="{{username}}">
+                    <input type="hidden" id="std_no" value="{{std_no}}" />
+                <div class="register-register-direction">
+                    <div class="register-register-direction-div"></div>
+                    <select id="register-register-direction">
+                        <option>前端</option>
+                        <option>后台</option>
+                         <option>安全</option>
+                        <option>设计</option>
+                        <option>产品</option>
+                    </select>
+                    <div class="register-register-direction-space"></div>
+                </div>
+                <div class="register-register-phone">
+                    <div class="register-register-phone-div"></div>
+                    <input type="tel" id="register-register-tel" maxlength="11" placeholder="手机号码" class="wInput" />
+                    <button id="register-register-getvercode">获取验证码</button>
+                </div>
+                <div class="register-register-phone-error"></div>
+                <div class="register-register-vercode">
+                    <div class="register-register-vercode-div"></div>
+                    <input type="text" id="register-register-vercode" placeholder="验证码" class="rInput" />
+                </div>
+                <button class="register-register-submit">确认</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{% static 'js/host.js' %}"></script>
+    <script src="{% static 'js/register-x.js' %}"></script>
+</body>
+
+</html>

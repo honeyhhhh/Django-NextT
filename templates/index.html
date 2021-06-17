@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plot.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <style>
+
+    </style>
+    <title>网络科技协会</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sections">
+            <div class="section" id="section0">
+                <div class="first" id="first">
+                    <nav>
+                        <a href="http://www.xiyounet.club" class="logo">
+                            <div class="logo"></div>
+                        </a>
+                        <a href="javascript:;" class="join">
+                            <div class="join"></div>
+                        </a>
+                    </nav>
+                    <section>
+                        <div class="sweet">最好的地方，来证明自己</div>
+                        <div class="introduction">
+                            <p>专注于为技术爱好者提供友好的环境，构建技术友好的大家庭。</p>
+                            <p>从0到1，为自己创造无限的机会与价值。</p>
+                        </div>
+                    </section>
+
+                    <div class="more">了解更多</div>
+                </div>
+            </div>
+            <div class="section" id="section1">
+                <div class="second" id="second">
+                    <nav>
+                        <a href="http://www.xiyounet.club" class="logo">
+                            <div class="logo"></div>
+                        </a>
+                    </nav>
+                    <div class="co">
+                        <section>
+                            <ul class="dot">
+                                <li con="1"></li>
+                                <li con="2"></li>
+                                <li con="3"></li>
+                                <li con="4"></li>
+                                <li con="5"></li>
+                            </ul>
+                            <div class="containS">
+                                <div class="containI" con="1" style="opacity: 100%;">
+                                    <h1>前端开发是什么?</h1>
+                                    <img src="{% static 'images/second/h5.png '%}" alt="">
+                                    <p>前端普遍认识来说就是基于浏览器的网页开发，包括你所说的页面，脚本，交互等等。在今天前端是可以写出精美的网页，前端是可以独立开发app，前端是可以做出基于微信客户端的小程序...还有很多很多。起初前端开发是从网页制作演变而来，早期的网页制作主要内容都是静态的，以文字图片为主，用户使用网站也以浏览为主。随着互联网的发展，现代网页更佳美观，交互效果显著，功能更加强大。因此现在的前端开发的主要通常是指html、css、js技术和一些开发框架的使用。</p>
+                                </div>
+                                <div class="containI" con="2">
+                                    <h1>后端开发是什么?</h1>
+                                    <img src="{% static 'images/second/java.png '%}" alt="">
+                                    <p>我们的职责集中在三部分，分别是平台设计、接口设计和功能实现。平台设计是搭建后端的支撑服务容器;接口设计是针对于不同行业进行相应的功能接口设计;功能实现则是完成具体的业务逻辑实现。主流的后端脚本语言有php、 java 、 python、C、C++等。后端就是跟数据库打交道的，需要熟练使用oracle、sqlserver、mysql等常用的数据库系统，并对数据库有较强的设计能力。后端代码是运行在服务器上的，不像前端运行在客户浏览器，所以你需要掌握少许的服务器基础。如maven项目配置管理工具，tomcat、jboss等应用服务器，同时需要了解在高并发处理情况下的负载调优问题。
+                                    </p>
+                                </div>
+                                <div class="containI" con="3">
+                                    <h1>网络安全是什么?</h1>
+                                    <img src="{% static 'images/second/save.png '%}" alt="">
+                                    <p>逆向工程：（又称逆向技术），是一种产品 设计技术再现过程，即对一项目标产品进行 逆向分析及研究，从而演绎并得出该产品的 处理流程、组织结构、功能特性及技术规格 等设计要素，以制作出功能相近，但又不完 全一样的产品。逆向工程源于商业及军事领 域中的硬件分析。其主要目的是在不能轻易 获得必要的生产信息的情况下，直接从成品 分析，推导出产品的设计原理。 web安全：Web安全威胁的凸显，黑客利用 网站操作系统的漏洞和Web服务程序的SQL
+                                        注入漏洞等得到Web服务器的控制权限，轻 则篡改网页内容，重则窃取重要内部数据， 更为严重的则是在网页中植入恶意代码， 使得网站访问者受到侵害。
+                                    </p>
+                                </div>
+                                <div class="containI" con="4">
+                                    <h1>视觉设计是什么?</h1>
+                                    <img src="{% static 'images/second/create.png '%}" alt="">
+                                    <p> 视觉设计以“视觉”作为沟通和表现的方 式，更多的是在视觉上给人一种美和舒适 的享受，同时也会传递一种信息和理念。 不仅承包视觉设计，而且还会承包界面设 计和交互设计的的噢。例如你现在看到的 界面就是我们设计的。 主要学习XD,PS,AI,PR，交互设计是关键！ 做UI设计的话我们还会使用XD的，网页中 的用户体验是我们最关注的！如果平面设 计有点乏的话还可以学习C4D来试试3D建 模。未来的方向可以有前端工程师，UI设 计师，还有产品经理，以及和交互有关系
+                                        的岗位。
+                                    </p>
+                                </div>
+                                <div class="containI" con="5">
+                                    <h1>产品运营是什么?</h1>
+                                    <img src="{% static 'images/second/product.png '%}" alt="">
+                                    <p>带你享受从”0“到“1”，再从“1”到 “10000”的全过程。微信公众号、app、 网站等等这些都是“产品”，想要通过自 己的努力“生”一个孩子（产品）吗？想 要把“孩子”养大吗？想让你的“孩子” 风靡世界吗？产品&运营组帮你实现梦想！ 需要有敏锐的洞察力和逻辑思考能力，了 解文档撰写，原型图工具简单实用，拥有 良好的沟通表达能力，天马行空的想象力， 最最重要的是有积极热情的学习态度和对 互联网的极致热爱！
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="choice">
+                                <li con="1"><span>前端</span>WEB开发</li>
+                                <li con="2"><span>后端</span>WEB开发</li>
+                                <li con="3">网络<span>安全</span></li>
+                                <li con="4">视觉<span>设计</span></li>
+                                <li con="5"><span>产品</span>运营</li>
+                            </ul>
+                            <input class="tiao" type="range" min="0" max="400" step="5" />
+                        </section>
+                    </div>
+                    <div class="down"></div>
+                </div>
+            </div>
+            <div class="section" id="section2">
+                <div class="login-bg">
+                    <nav>
+                        <a href="http://www.xiyounet.club" class="logo">
+                            <div class="logo"></div>
+                        </a>
+                        <a href="http://www.xiyounet.club" class="join">
+                            <div class="join"></div>
+                        </a>
+                    </nav>
+                    <div class="login-slogan">
+                        <div>IDEA,</div>
+                        <div>SHARE,</div>
+                        <div>BEYOND</div>
+                    </div>
+                    <div class="login-login">
+                        <div class="login-login-bg"></div>
+                        <div class="login-login-logo">
+                            <img src="{% static 'images/third/xiyou.png' %}" title="西安邮电大学" /> 西安邮电大学
+                        </div>
+                        <div class="login-login-tip">
+                            教学管理信息服务平台
+                        </div>
+                        <div id="login-login">
+                            {% csrf_token %}
+                            <div class="login-login-num">
+                                <div class="login-login-num-div"></div>
+                                <input type="text" id="student-number" placeholder="学号" />
+                            </div>
+                            <div class="login-login-pwd">
+                                <div class="login-login-pwd-div"></div>
+                                <input type="password" id="student-password" placeholder="密码" />
+                            </div>
+                            <button class="login-submit">登录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/index-x.js' %}"></script>
+    <script src="{% static 'js/host.js' %}"></script>
+    <script src="{% static 'js/login-x.js' %}"></script>
+</body>
+
+</html>
